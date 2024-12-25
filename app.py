@@ -1,6 +1,7 @@
 import json
 import numpy as np
 import torch
+from flask_cors import CORS
 from data.preprocess import tokenize, bag_of_words
 from models.models import NeuralNet
 from utils.helper import chat_response
@@ -8,6 +9,7 @@ from flask import Flask, render_template, request, jsonify
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 
 # Load intents and model data
 with open('intents.json', 'r') as f:
@@ -52,4 +54,7 @@ def chat():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
+
+CORS(app)

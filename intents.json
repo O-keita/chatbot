@@ -192,7 +192,284 @@
           "You can find our FAQ section on the website under the 'Help' menu. Let me know if you have any specific questions!",
           "Our FAQ section has answers to common queries. Would you like me to point you to a specific topic?"
         ]
+      }, 
+      {
+        "tag": "greeting",
+        "patterns": ["hello", "hi", "hey"],
+        "responses": ["Hello! Welcome to MarAcademy. How can I assist you today?"]
+      },
+      {
+        "tag": "about_mina",
+        "patterns": ["who is Mina", "who are you", "tell me about Mina"],
+        "responses": ["I am Mina, your friendly assistant at MarAcademy! How can I help you today?"]
+      },
+      {
+        "tag": "resume_building",
+        "patterns": ["I need a resume", "can you help with resume building", "how to create a resume"],
+        "responses": ["Yes! I can guide you on building a resume. Would you like to know how to start?"]
+      },
+      {
+        "tag": "about_omar",
+        "patterns": ["who is Omar Keita", "who founded you"],
+        "responses": ["Omar Keita, the founder of MarAcademy, is committed to providing free learning resources and career opportunities for high school students worldwide."]
+      },
+      {
+        "tag": "courses",
+        "patterns": ["do you provide courses", "what courses are available", "tell me about courses"],
+        "responses": ["Yes, we offer free coding courses. Would you like to explore our offerings?"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["bye", "goodbye", "see you later"],
+        "responses": ["Goodbye! Hope to see you back at MarAcademy soon."]
+      }, 
+
+      {
+        "tag": "resume_help",
+        "patterns": [
+          "How do I create a resume?",
+          "Can you help me with my resume?",
+          "I need help building my resume",
+          "What should I include in my resume?"
+        ],
+        "responses": [
+          "I can guide you on creating a resume! Start by including your name, contact information, education, work experience, and skills. Would you like more specific guidance?"
+        ]
+      },
+      {
+        "tag": "resume_tips",
+        "patterns": [
+          "What are some resume tips?",
+          "Can you give me tips for my resume?",
+          "How can I improve my resume?",
+          "What makes a good resume?"
+        ],
+        "responses": [
+          "Here are some resume tips: Keep it concise, use bullet points, tailor it for the job, highlight achievements, and proofread! Would you like more detailed advice on any section?"
+        ]
+      },
+      {
+        "tag": "resume_format",
+        "patterns": [
+          "What is the best format for a resume?",
+          "Which resume format should I use?",
+          "Can you recommend a resume format?"
+        ],
+        "responses": [
+          "The most popular resume formats are chronological, functional, and combination. Choose one based on your work experience and the job you're applying for. Would you like a template?"
+        ]
+      },
+      {
+        "tag": "resume_sample",
+        "patterns": [
+          "Do you have a resume sample?",
+          "Can you show me a resume example?",
+          "Give me a sample resume"
+        ],
+        "responses": [
+          "Here’s a simple sample format you can follow: Name, Contact Info, Objective (Optional), Education, Experience, Skills, Certifications, and References."
+        ]
+      },
+      {
+        "tag": "scholarships_info",
+        "patterns": [
+          "What scholarships are available?",
+          "Tell me about scholarships",
+          "Do you offer scholarships?",
+          "What scholarships can I apply for?"
+        ],
+        "responses": [
+          "We provide scholarship opportunities for high school students worldwide. You can check our website for current scholarship offerings. Would you like to know more about the eligibility criteria?"
+        ]
+      },
+      {
+        "tag": "scholarships_eligibility",
+        "patterns": [
+          "Who is eligible for scholarships?",
+          "What are the eligibility requirements for scholarships?",
+          "Can I apply for a scholarship?"
+        ],
+        "responses": [
+          "Eligibility varies depending on the scholarship, but generally, students must be enrolled in high school, demonstrate academic achievement, and meet other specific requirements. Would you like to explore specific scholarships?"
+        ]
+      },
+      {
+        "tag": "scholarships_deadlines",
+        "patterns": [
+          "When is the deadline to apply for scholarships?",
+          "What are the deadlines for scholarships?",
+          "Are there any upcoming scholarship deadlines?"
+        ],
+        "responses": [
+          "Scholarship deadlines vary by program. Please check our website or the specific scholarship page for the latest dates."
+        ]
+      },
+      {
+        "tag": "scholarships_application_process",
+        "patterns": [
+          "How do I apply for a scholarship?",
+          "What is the process for applying for a scholarship?",
+          "Can you help me apply for a scholarship?"
+        ],
+        "responses": [
+          "To apply for a scholarship, you'll need to fill out an application form, submit your academic records, and provide any required supporting documents. Would you like to know more about the application process?"
+        ]
+      },
+      {
+        "tag": "scholarships_guidance",
+        "patterns": [
+          "Do you offer help with scholarship applications?",
+          "Can you guide me through the scholarship application?",
+          "Can you help me write a scholarship essay?"
+        ],
+        "responses": [
+          "Yes! I can provide guidance on writing scholarship essays, filling out application forms, and gathering necessary documents. Would you like advice on any specific part of the process?"
+        ]
+      },
+
+      {
+        "tag": "about_omar",
+        "patterns": [
+          "Who is Omar Keita?",
+          "Tell me about Omar Keita",
+          "Who founded MarAcademy?",
+          "Can you tell me about the founder?"
+        ],
+        "responses": [
+          "Omar Keita is the founder of MarAcademy, an online platform dedicated to providing free coding courses, career development, and scholarship opportunities for high school students."
+        ]
+      },
+      {
+        "tag": "omar_background",
+        "patterns": [
+          "What is Omar Keita's background?",
+          "What does Omar Keita do?",
+          "Tell me about Omar Keita's career"
+        ],
+        "responses": [
+          "Omar Keita is a machine learning engineer with a passion for education and technology. He is committed to using AI and machine learning to solve real-world problems and to help students access valuable learning resources."
+        ]
+      },
+      {
+        "tag": "omar_motivation",
+        "patterns": [
+          "Why did Omar Keita start MarAcademy?",
+          "What motivated Omar Keita to create MarAcademy?",
+          "What is Omar Keita's mission with MarAcademy?"
+        ],
+        "responses": [
+          "Omar Keita started MarAcademy with the mission of empowering high school students worldwide by offering free educational resources, scholarships, and career development opportunities. His goal is to make quality education accessible to everyone."
+        ]
+      },
+      {
+        "tag": "omar_goals",
+        "patterns": [
+          "What are Omar Keita's goals?",
+          "What is Omar Keita trying to achieve?",
+          "What are the main goals of MarAcademy?"
+        ],
+        "responses": [
+          "Omar Keita aims to revolutionize education by creating an inclusive platform where high school students can learn valuable skills, such as coding, machine learning, and career development, without financial barriers."
+        ]
+      },
+      {
+        "tag": "omar_personality",
+        "patterns": [
+          "What is Omar Keita like?",
+          "Tell me about Omar Keita's personality",
+          "How would you describe Omar Keita?"
+        ],
+        "responses": [
+          "Omar Keita is passionate, driven, and focused on making a positive impact. He is dedicated to helping others succeed and believes in the power of education to transform lives."
+        ]
+      },
+      {
+        "tag": "location",
+        "patterns": [
+          "Where is MarAcademy located?",
+          "Where are you based?",
+          "What is the location of MarAcademy?"
+        ],
+        "responses": [
+          "MarAcademy is an online platform, so we are accessible to students worldwide! We aim to provide free resources and support to high school students, regardless of their location."
+        ]
+      },
+      {
+        "tag": "mission",
+        "patterns": [
+          "What is MarAcademy's mission?",
+          "What does MarAcademy aim to do?",
+          "Tell me about your mission"
+        ],
+        "responses": [
+          "The mission of MarAcademy is to empower high school students by providing free coding courses, career development tools, and scholarships to help them succeed in their educational and professional journeys."
+        ]
+      },
+      {
+        "tag": "vision",
+        "patterns": [
+          "What is MarAcademy's vision?",
+          "What is your vision for the future?",
+          "What is the vision behind MarAcademy?"
+        ],
+        "responses": [
+          "MarAcademy's vision is to become a global leader in accessible education, helping students from all backgrounds unlock their potential by offering high-quality, free resources that empower them to thrive in the digital age."
+        ]
+      },
+      {
+        "intents": [
+          {
+            "tag": "location",
+            "patterns": [
+              "Where is MarAcademy located?",
+              "Where are you based?",
+              "What is the location of MarAcademy?"
+            ],
+            "responses": [
+              "MarAcademy is an online platform, so we are accessible to students worldwide! We aim to provide free resources and support to high school students, regardless of their location."
+            ]
+          },
+          {
+            "tag": "mission",
+            "patterns": [
+              "What is MarAcademy's mission?",
+              "What does MarAcademy aim to do?",
+              "Tell me about your mission"
+            ],
+            "responses": [
+              "The mission of MarAcademy is to empower high school students by providing free coding courses, career development tools, and scholarships to help them succeed in their educational and professional journeys."
+            ]
+          },
+          {
+            "tag": "vision",
+            "patterns": [
+              "What is MarAcademy's vision?",
+              "What is your vision for the future?",
+              "What is the vision behind MarAcademy?"
+            ],
+            "responses": [
+              "MarAcademy's vision is to become a global leader in accessible education, helping students from all backgrounds unlock their potential by offering high-quality, free resources that empower them to thrive in the digital age."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "career_support",
+        "patterns": [
+          "Does MarAcademy provide career support?",
+          "Can you help me with my career?",
+          "What career services do you offer?",
+          "Do you offer job placement assistance?"
+        ],
+        "responses": [
+          "MarAcademy provides career development support, including resume building, internship opportunities, and job placement assistance for students. We aim to help you succeed in your career."
+        ]
       }
+      
+      
+      
+      
+      
     ]
   }
   

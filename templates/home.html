@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Mina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'futuristic-orange': '#FF6B00',
+                        'dark-blue': '#001F3F',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        .chat-container {
+            background: linear-gradient(135deg, rgba(0, 31, 63, 0.8) 0%, rgba(0, 31, 63, 0.9) 100%);
+        }
+        .message-bubble {
+            position: relative;
+            overflow: hidden;
+        }
+        .message-bubble::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 50%, transparent 100%);
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+        .message-bubble:hover::after {
+            top: 0;
+            left: 0;
+        }
+        #chat-box::-webkit-scrollbar {
+            width: 8px;
+        }
+        #chat-box::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        #chat-box::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+        #chat-box::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-white h-full flex flex-col">
+    <div class="chat-container flex-grow flex flex-col h-full">
+        <h1 class="text-4xl font-bold text-futuristic-orange p-4 text-center">Chat with Mina <i class="ri-robot-fill"></i></h1>
+        <div id="chat-box" class="flex-grow overflow-y-auto p-6 space-y-4"></div>
+        <div class="bg-white bg-opacity-10 p-4">
+            <div class="max-w-6xl mx-auto flex space-x-2">
+                <input type="text" id="input-box" placeholder="Type a message..." class="flex-grow p-4 rounded-l-xl bg-dark-blue bg-opacity-50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-futuristic-orange transition-all duration-300 text-lg">
+                <button id="send-button" onclick="sendMessage()" class="bg-futuristic-orange text-white px-8 py-4 rounded-r-xl hover:bg-opacity-80 transition-colors duration-300 flex items-center justify-center transform hover:scale-105">
+                    <i class="ri-send-plane-fill mr-2"></i> Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById('chat-box');
+
+        function scrollToBottom() {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function isNearBottom() {
+            return chatBox.scrollHeight - chatBox.clientHeight - chatBox.scrollTop < 100;
+        }
+
+        async function sendMessage() {
+            const inputBox = document.getElementById('input-box');
+            const userMessage = inputBox.value;
+
+            if (userMessage.trim() === '') {
+                return;
+            }
+
+            const wasNearBottom = isNearBottom();
+
+            // Display user's message in the chat box
+            const userMessageElement = document.createElement('div');
+            userMessageElement.className = 'flex justify-end mb-4';
+            userMessageElement.innerHTML = `
+                <div class="message-bubble max-w-3xl bg-futuristic-orange rounded-2xl p-4 text-white shadow-lg text-lg">
+                    <span class="font-bold"><i class="ri-user-fill mr-2"></i>You:</span> ${userMessage}
+                </div>
+            `;
+            chatBox.appendChild(userMessageElement);
+            inputBox.value = '';
+
+            if (wasNearBottom) {
+                scrollToBottom();
+            }
+
+            // Send message to the Flask backend
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userMessage })
+            });
+
+            const data = await response.json();
+
+            // Display bot's response in the chat box
+            const botMessageElement = document.createElement('div');
+            botMessageElement.className = 'flex justify-start mb-4';
+            botMessageElement.innerHTML = `
+                <div class="message-bubble max-w-3xl bg-white bg-opacity-20 rounded-2xl p-4 text-white shadow-lg text-lg">
+                    <span class="font-bold text-futuristic-orange"><i class="ri-robot-fill mr-2"></i>Mina:</span> <span class="bot-response"></span>
+                </div>
+            `;
+            chatBox.appendChild(botMessageElement);
+
+            // Implement word-by-word typing effect
+            const botResponse = botMessageElement.querySelector('.bot-response');
+            const words = data.response.split(' ');
+            for (let i = 0; i < words.length; i++) {
+                await new Promise(resolve => setTimeout(resolve, 100)); // Adjust typing speed here
+                botResponse.textContent += words[i] + ' ';
+                if (wasNearBottom) {
+                    scrollToBottom();
+                }
+            }
+
+            if (wasNearBottom) {
+                scrollToBottom();
+            }
+        }
+
+        // Add event listener for Enter key
+        document.getElementById('input-box').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Observe changes in the chat box
+        const observer = new MutationObserver(() => {
+            if (isNearBottom()) {
+                scrollToBottom();
+            }
+        });
+
+        observer.observe(chatBox, { childList: true, subtree: true });
+
+        // Initial scroll to bottom
+        scrollToBottom();
+    </script>
+</body>
+</html>

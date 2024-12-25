@@ -7,12 +7,12 @@ import torchvision
 import numpy as np
 from data.preprocess import bag_of_words, tokenize, stem
 from models.models import NeuralNet
-
+import nltk
 import sys
 import os
 
 # Add the parent directory to sys.path
-
+nltk.download('punkt')
 
 with open('intents.json') as f:
     intents = json.load(f)

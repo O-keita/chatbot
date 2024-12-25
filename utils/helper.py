@@ -1,11 +1,15 @@
 import torch
 import numpy as np
+import nltk
+
 
 from data.preprocess import tokenize, bag_of_words
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+
+nltk.download('punkt')
 
 def chat_response(msg, model, intents, all_words, tags):
 

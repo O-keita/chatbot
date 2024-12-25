@@ -1,4 +1,5 @@
 import json
+import nltk
 import numpy as np
 import torch
 from flask_cors import CORS
@@ -10,6 +11,7 @@ from flask import Flask, render_template, request, jsonify
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+nltk.download('punkt')
 
 # Load intents and model data
 with open('intents.json', 'r') as f:

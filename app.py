@@ -10,8 +10,10 @@ from flask import Flask, render_template, request, jsonify
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-nltk.download('punkt')
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
 # Load intents and model data
 with open('intents.json', 'r') as f:
@@ -39,7 +41,7 @@ bot_name = 'Mina'
 
 app = Flask(__name__)
 
-
+CORS(app)
 
 @app.route('/')
 def home():
@@ -55,8 +57,7 @@ def chat():
 
 
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
-
-CORS(app)

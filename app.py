@@ -18,10 +18,12 @@ try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
+    nltk.download('punkt_tab')
 
 # Load intents and model data
 with open('intents.json', 'r') as f:
     intents = json.load(f)
+
 
 FILE = 'chatbot_model.pth'
 data = torch.load(FILE)

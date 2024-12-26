@@ -7,6 +7,8 @@ from nltk.stem.porter import PorterStemmer
 nltk.data.path.append(os.path.join(os.path.dirname(__file__), '..', 'nltk'))
 
 nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab')
+
 
 stemmer = PorterStemmer()
 

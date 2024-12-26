@@ -1,9 +1,13 @@
 import json
+import os
 import nltk
 import numpy as np
 from nltk.stem.porter import PorterStemmer
 
-nltk.download('punkt')
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), '..', 'nltk'))
+
+nltk.download('punkt', quiet=True)
+
 stemmer = PorterStemmer()
 
 

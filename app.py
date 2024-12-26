@@ -7,6 +7,10 @@ from data.preprocess import tokenize, bag_of_words
 from models.models import NeuralNet
 from utils.helper import chat_response
 from flask import Flask, render_template, request, jsonify
+import os
+
+
+os.environ["NLTK_DATA"] = os.path.join(os.path.dirname(__file__), "nltk")
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

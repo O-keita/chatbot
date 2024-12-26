@@ -1,475 +1,488 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hello",
-          "Hey",
-          "Good morning",
-          "Good evening", 
-          "What's up?",
-          "Howdy"
-        ],
-        "responses": [
-          "Hello! Welcome to MarAcademy. How can I assist you today?",
-          "Hi there! What do you need help with at MarAcademy?",
-          "Hey! How can I help you with your learning journey?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": [
-          "Bye",
-          "Goodbye",
-          "See you later",
-          "Take care",
-          "I'm leaving now"
-        ],
-        "responses": [
-          "Goodbye! Hope to see you back at MarAcademy soon.",
-          "Take care! Let us know if you need any help.",
-          "See you later! Keep learning."
-        ]
-      },
-      {
-        "tag": "courses_offered",
-        "patterns": [
-          "What courses do you offer?",
-          "Tell me about your courses",
-          "What can I learn here?",
-          "List the available courses",
-          "Do you have any programming courses?"
-        ],
-        "responses": [
-          "We offer a variety of courses including beginner programming, data science, machine learning, and career development. Which one are you interested in?",
-          "Our courses include free coding lessons, career preparation, and scholarship opportunities. Let me know what you're looking for!"
-        ]
-      },
-      {
-        "tag": "course_details",
-        "patterns": [
-          "Can you tell me more about the programming course?",
-          "What does the data science course include?",
-          "What will I learn in the machine learning course?",
-          "Are there any scholarships for high school students?"
-        ],
-        "responses": [
-          "Our beginner programming course covers the basics of coding, including variables, loops, and functions. Would you like to enroll?",
-          "The data science course introduces data analysis, visualization, and machine learning basics. Can I help you register?",
-          "Our scholarships are aimed at high school students to help them access our free coding courses. Would you like to know more?"
-        ]
-      },
-      {
-        "tag": "registration_help",
-        "patterns": [
-          "How do I register?",
-          "What is the registration process?",
-          "Can you help me sign up?",
-          "I want to create an account",
-          "How do I enroll in a course?"
-        ],
-        "responses": [
-          "To register, visit our website, create an account, and select the course you'd like to enroll in. Need further assistance?",
-          "You can sign up by clicking the 'Register' button on our homepage and following the steps. Do you need a walkthrough?"
-        ]
-      },
-      {
-        "tag": "technical_support",
-        "patterns": [
-          "I'm having trouble logging in",
-          "The website is not working",
-          "I can't access my course",
-          "Something is wrong with my account",
-          "Can you help with a technical issue?"
-        ],
-        "responses": [
-          "I'm sorry you're having trouble. Please describe the issue, and we'll resolve it as soon as possible.",
-          "Technical issues can be frustrating. Can you provide more details so I can assist you better?"
-        ]
-      },
-      {
-        "tag": "instructor_permissions",
-        "patterns": [
-          "Can instructors access admin sections?",
-          "What permissions do instructors have?",
-          "How do I manage instructor permissions?",
-          "Can instructors edit course content?"
-        ],
-        "responses": [
-          "Instructors have access to specific admin sections related to course management. Would you like detailed instructions on managing permissions?",
-          "Yes, instructors can access admin sections to update their courses. Do you need help setting this up?"
-        ]
-      },
-      {
-        "tag": "maracademy_mission",
-        "patterns": [
-          "What is MarAcademy about?",
-          "Tell me about MarAcademy",
-          "What is your mission?",
-          "Why was MarAcademy created?"
-        ],
-        "responses": [
-          "MarAcademy aims to provide free coding courses, career development, and scholarship opportunities for high school students. We are dedicated to making education accessible to everyone.",
-          "Our mission is to empower students with coding skills, professional guidance, and opportunities to advance their careers."
-        ]
-      },
-      {
-        "tag": "about_founder",
-        "patterns": [
-          "Who is the founder of MarAcademy?",
-          "Tell me about the founder",
-          "Who created MarAcademy?",
-          "What can you tell me about Omar Keita?"
-        ],
-        "responses": [
-          "MarAcademy was founded by Omar Keita, a passionate machine learning engineer dedicated to making education accessible to everyone. He believes in empowering students with the skills they need to succeed.",
-          "Omar Keita, the founder of MarAcademy, is committed to providing free learning resources and career opportunities for high school students worldwide."
-        ]
-      },
-      {
-        "tag": "contact_support",
-        "patterns": [
-          "How do I contact support?",
-          "Is there a way to get help?",
-          "Who can I reach out to for assistance?",
-          "Can I email support?",
-          "How can I get in touch with someone?"
-        ],
-        "responses": [
-          "You can reach out to our support team through the 'Contact Us' page on our website. Is there anything specific you need help with right now?",
-          "Feel free to email us at support@maracademy.com or use the chat function on our website for assistance."
-        ]
-      },
-      {
-        "tag": "feedback",
-        "patterns": [
-          "I want to give feedback",
-          "How can I provide suggestions?",
-          "Where can I submit a review?",
-          "Can I share my thoughts on the course?"
-        ],
-        "responses": [
-          "We'd love to hear your feedback! You can submit it through our website or email us at feedback@maracademy.com.",
-          "Your suggestions are valuable to us. Please fill out the feedback form on our website or drop us an email."
-        ]
-      },
-      {
-        "tag": "schedule_update",
-        "patterns": [
-          "When will the website be updated?",
-          "Are you adding new courses soon?",
-          "What is the update schedule for MarAcademy?",
-          "When will new features be added?"
-        ],
-        "responses": [
-          "We regularly update the website to add new courses and features. Our next major update is scheduled for Thursday after 11:00 AM. Stay tuned!",
-          "New content and features are added frequently. If you're waiting for something specific, let us know!"
-        ]
-      },
-      {
-        "tag": "career_opportunities",
-        "patterns": [
-          "Do you offer career development programs?",
-          "How can MarAcademy help with my career?",
-          "Are there resources for job preparation?",
-          "Do you provide resume building or interview tips?"
-        ],
-        "responses": [
-          "Yes, we offer career development programs including resume building, interview preparation, and guidance on job applications. Would you like to know more?",
-          "Our career resources are designed to help you succeed. Let me know if you'd like details about resume tips or interview strategies."
-        ]
-      },
-      {
-        "tag": "faq",
-        "patterns": [
-          "Where can I find the FAQ?",
-          "Do you have a help section?",
-          "Is there a list of frequently asked questions?",
-          "Can I read more about how MarAcademy works?"
-        ],
-        "responses": [
-          "You can find our FAQ section on the website under the 'Help' menu. Let me know if you have any specific questions!",
-          "Our FAQ section has answers to common queries. Would you like me to point you to a specific topic?"
-        ]
-      }, 
-      {
-        "tag": "greeting",
-        "patterns": ["hello", "hi", "hey"],
-        "responses": ["Hello! Welcome to MarAcademy. How can I assist you today?"]
-      },
-      {
-        "tag": "about_mina",
-        "patterns": ["who is Mina", "who are you", "tell me about Mina"],
-        "responses": ["I am Mina, your friendly assistant at MarAcademy! How can I help you today?"]
-      },
-      {
-        "tag": "resume_building",
-        "patterns": ["I need a resume", "can you help with resume building", "how to create a resume"],
-        "responses": ["Yes! I can guide you on building a resume. Would you like to know how to start?"]
-      },
-      {
-        "tag": "about_omar",
-        "patterns": ["who is Omar Keita", "who founded you"],
-        "responses": ["Omar Keita, the founder of MarAcademy, is committed to providing free learning resources and career opportunities for high school students worldwide."]
-      },
-      {
-        "tag": "courses",
-        "patterns": ["do you provide courses", "what courses are available", "tell me about courses"],
-        "responses": ["Yes, we offer free coding courses. Would you like to explore our offerings?"]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": ["bye", "goodbye", "see you later"],
-        "responses": ["Goodbye! Hope to see you back at MarAcademy soon."]
-      }, 
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "how are you?",
+        "Good morning",
+        "Good evening",
+        "What's up?",
+        "Howdy"
+      ],
+      "responses": [
+        "Hello! Welcome to MarAcademy. How can I assist you today?",
+        "Hi there! What do you need help with at MarAcademy?",
+        "Hey! How can I help you with your learning journey?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Take care",
+        "I'm leaving now"
+      ],
+      "responses": [
+        "Goodbye! Hope to see you back at MarAcademy soon.",
+        "Take care! Let us know if you need any help.",
+        "See you later! Keep learning."
+      ]
+    },
+    {
+      "tag": "courses_offered",
+      "patterns": [
+        "What courses do you offer?",
+        "Tell me about your courses",
+        "What can I learn here?",
+        "List the available courses",
+        "Do you have any programming courses?"
+      ],
+      "responses": [
+        "We offer a variety of courses including beginner programming, data science, machine learning, and career development. Which one are you interested in?",
+        "Our courses include free coding lessons, career preparation, and scholarship opportunities. Let me know what you're looking for!"
+      ]
+    },
+    {
+      "tag": "course_details",
+      "patterns": [
+        "Can you tell me more about the programming course?",
+        "What does the data science course include?",
+        "What will I learn in the machine learning course?",
+        "Are there any scholarships for high school students?"
+      ],
+      "responses": [
+        "Our beginner programming course covers the basics of coding, including variables, loops, and functions. Would you like to enroll?",
+        "The data science course introduces data analysis, visualization, and machine learning basics. Can I help you register?",
+        "Our scholarships are aimed at high school students to help them access our free coding courses. Would you like to know more?"
+      ]
+    },
+    {
+      "tag": "registration_help",
+      "patterns": [
+        "How do I register?",
+        "What is the registration process?",
+        "Can you help me sign up?",
+        "I want to create an account",
+        "How do I enroll in a course?"
+      ],
+      "responses": [
+        "To register, visit our website, create an account, and select the course you'd like to enroll in. Need further assistance?",
+        "You can sign up by clicking the 'Register' button on our homepage and following the steps. Do you need a walkthrough?"
+      ]
+    },
+    {
+      "tag": "technical_support",
+      "patterns": [
+        "I'm having trouble logging in",
+        "The website is not working",
+        "I can't access my course",
+        "Something is wrong with my account",
+        "Can you help with a technical issue?"
+      ],
+      "responses": [
+        "I'm sorry you're having trouble. Please describe the issue, and we'll resolve it as soon as possible.",
+        "Technical issues can be frustrating. Can you provide more details so I can assist you better?"
+      ]
+    },
+    {
+      "tag": "instructor_permissions",
+      "patterns": [
+        "Can instructors access admin sections?",
+        "What permissions do instructors have?",
+        "How do I manage instructor permissions?",
+        "Can instructors edit course content?"
+      ],
+      "responses": [
+        "Instructors have access to specific admin sections related to course management. Would you like detailed instructions on managing permissions?",
+        "Yes, instructors can access admin sections to update their courses. Do you need help setting this up?"
+      ]
+    },
+    {
+      "tag": "maracademy_mission",
+      "patterns": [
+        "What is MarAcademy about?",
+        "Tell me about MarAcademy",
+        "What is your mission?",
+        "Why was MarAcademy created?"
+      ],
+      "responses": [
+        "MarAcademy aims to provide free coding courses, career development, and scholarship opportunities for high school students. We are dedicated to making education accessible to everyone.",
+        "Our mission is to empower students with coding skills, professional guidance, and opportunities to advance their careers."
+      ]
+    },
+    {
+      "tag": "about_founder",
+      "patterns": [
+        "Who is the founder of MarAcademy?",
+        "Tell me about the founder",
+        "Who created MarAcademy?",
+        "What can you tell me about Omar Keita?"
+      ],
+      "responses": [
+        "MarAcademy was founded by Omar Keita, a passionate machine learning engineer dedicated to making education accessible to everyone. He believes in empowering students with the skills they need to succeed.",
+        "Omar Keita, the founder of MarAcademy, is committed to providing free learning resources and career opportunities for high school students worldwide."
+      ]
+    },
+    {
+      "tag": "contact_support",
+      "patterns": [
+        "How do I contact support?",
+        "Is there a way to get help?",
+        "Who can I reach out to for assistance?",
+        "Can I email support?",
+        "How can I get in touch with someone?"
+      ],
+      "responses": [
+        "You can reach out to our support team through the 'Contact Us' page on our website. Is there anything specific you need help with right now?",
+        "Feel free to email us at support@maracademy.com or use the chat function on our website for assistance."
+      ]
+    },
+    {
+      "tag": "feedback",
+      "patterns": [
+        "I want to give feedback",
+        "How can I provide suggestions?",
+        "Where can I submit a review?",
+        "Can I share my thoughts on the course?"
+      ],
+      "responses": [
+        "We'd love to hear your feedback! You can submit it through our website or email us at feedback@maracademy.com.",
+        "Your suggestions are valuable to us. Please fill out the feedback form on our website or drop us an email."
+      ]
+    },
+    {
+      "tag": "schedule_update",
+      "patterns": [
+        "When will the website be updated?",
+        "Are you adding new courses soon?",
+        "What is the update schedule for MarAcademy?",
+        "When will new features be added?"
+      ],
+      "responses": [
+        "We regularly update the website to add new courses and features. Our next major update is scheduled for Thursday after 11:00 AM. Stay tuned!",
+        "New content and features are added frequently. If you're waiting for something specific, let us know!"
+      ]
+    },
+    {
+      "tag": "career_opportunities",
+      "patterns": [
+        "Do you offer career development programs?",
+        "How can MarAcademy help with my career?",
+        "Are there resources for job preparation?",
+        "Do you provide resume building or interview tips?"
+      ],
+      "responses": [
+        "Yes, we offer career development programs including resume building, interview preparation, and guidance on job applications. Would you like to know more?",
+        "Our career resources are designed to help you succeed. Let me know if you'd like details about resume tips or interview strategies."
+      ]
+    },
+    {
+      "tag": "faq",
+      "patterns": [
+        "Where can I find the FAQ?",
+        "Do you have a help section?",
+        "Is there a list of frequently asked questions?",
+        "Can I read more about how MarAcademy works?"
+      ],
+      "responses": [
+        "You can find our FAQ section on the website under the 'Help' menu. Let me know if you have any specific questions!",
+        "Our FAQ section has answers to common queries. Would you like me to point you to a specific topic?"
+      ]
+    }, 
+    {
+      "tag": "about_mina",
+      "patterns": ["who is Mina", "who are you", "tell me about Mina"],
+      "responses": ["I am Mina, your friendly assistant at MarAcademy! How can I help you today?"]
+    },
+    {
+      "tag": "resume_building",
+      "patterns": ["I need a resume", "can you help with resume building", "how to create a resume"],
+      "responses": ["Yes! I can guide you on building a resume. Would you like to know how to start?"]
+    },
+    {
+      "tag": "about_omar",
+      "patterns": ["who is Omar Keita", "who founded you"],
+      "responses": ["Omar Keita, the founder of MarAcademy, is committed to providing free learning resources and career opportunities for high school students worldwide."]
+    },
+    {
+      "tag": "courses",
+      "patterns": ["do you provide courses", "what courses are available", "tell me about courses"],
+      "responses": ["Yes, we offer free coding courses. Would you like to explore our offerings?"]
+    },
 
-      {
-        "tag": "resume_help",
-        "patterns": [
-          "How do I create a resume?",
-          "Can you help me with my resume?",
-          "I need help building my resume",
-          "What should I include in my resume?"
-        ],
-        "responses": [
-          "I can guide you on creating a resume! Start by including your name, contact information, education, work experience, and skills. Would you like more specific guidance?"
-        ]
-      },
-      {
-        "tag": "resume_tips",
-        "patterns": [
-          "What are some resume tips?",
-          "Can you give me tips for my resume?",
-          "How can I improve my resume?",
-          "What makes a good resume?"
-        ],
-        "responses": [
-          "Here are some resume tips: Keep it concise, use bullet points, tailor it for the job, highlight achievements, and proofread! Would you like more detailed advice on any section?"
-        ]
-      },
-      {
-        "tag": "resume_format",
-        "patterns": [
-          "What is the best format for a resume?",
-          "Which resume format should I use?",
-          "Can you recommend a resume format?"
-        ],
-        "responses": [
-          "The most popular resume formats are chronological, functional, and combination. Choose one based on your work experience and the job you're applying for. Would you like a template?"
-        ]
-      },
-      {
-        "tag": "resume_sample",
-        "patterns": [
-          "Do you have a resume sample?",
-          "Can you show me a resume example?",
-          "Give me a sample resume"
-        ],
-        "responses": [
-          "Here’s a simple sample format you can follow: Name, Contact Info, Objective (Optional), Education, Experience, Skills, Certifications, and References."
-        ]
-      },
-      {
-        "tag": "scholarships_info",
-        "patterns": [
-          "What scholarships are available?",
-          "Tell me about scholarships",
-          "Do you offer scholarships?",
-          "What scholarships can I apply for?"
-        ],
-        "responses": [
-          "We provide scholarship opportunities for high school students worldwide. You can check our website for current scholarship offerings. Would you like to know more about the eligibility criteria?"
-        ]
-      },
-      {
-        "tag": "scholarships_eligibility",
-        "patterns": [
-          "Who is eligible for scholarships?",
-          "What are the eligibility requirements for scholarships?",
-          "Can I apply for a scholarship?"
-        ],
-        "responses": [
-          "Eligibility varies depending on the scholarship, but generally, students must be enrolled in high school, demonstrate academic achievement, and meet other specific requirements. Would you like to explore specific scholarships?"
-        ]
-      },
-      {
-        "tag": "scholarships_deadlines",
-        "patterns": [
-          "When is the deadline to apply for scholarships?",
-          "What are the deadlines for scholarships?",
-          "Are there any upcoming scholarship deadlines?"
-        ],
-        "responses": [
-          "Scholarship deadlines vary by program. Please check our website or the specific scholarship page for the latest dates."
-        ]
-      },
-      {
-        "tag": "scholarships_application_process",
-        "patterns": [
-          "How do I apply for a scholarship?",
-          "What is the process for applying for a scholarship?",
-          "Can you help me apply for a scholarship?"
-        ],
-        "responses": [
-          "To apply for a scholarship, you'll need to fill out an application form, submit your academic records, and provide any required supporting documents. Would you like to know more about the application process?"
-        ]
-      },
-      {
-        "tag": "scholarships_guidance",
-        "patterns": [
-          "Do you offer help with scholarship applications?",
-          "Can you guide me through the scholarship application?",
-          "Can you help me write a scholarship essay?"
-        ],
-        "responses": [
-          "Yes! I can provide guidance on writing scholarship essays, filling out application forms, and gathering necessary documents. Would you like advice on any specific part of the process?"
-        ]
-      },
+    {
+      "tag": "resume_help",
+      "patterns": [
+        "How do I create a resume?",
+        "Can you help me with my resume?",
+        "I need help building my resume",
+        "What should I include in my resume?"
+      ],
+      "responses": [
+        "I can guide you on creating a resume! Start by including your name, contact information, education, work experience, and skills. Would you like more specific guidance?"
+      ]
+    },
+    {
+      "tag": "resume_tips",
+      "patterns": [
+        "What are some resume tips?",
+        "Can you give me tips for my resume?",
+        "How can I improve my resume?",
+        "What makes a good resume?"
+      ],
+      "responses": [
+        "Here are some resume tips: Keep it concise, use bullet points, tailor it for the job, highlight achievements, and proofread! Would you like more detailed advice on any section?"
+      ]
+    },
+    {
+      "tag": "resume_format",
+      "patterns": [
+        "What is the best format for a resume?",
+        "Which resume format should I use?",
+        "Can you recommend a resume format?"
+      ],
+      "responses": [
+        "The most popular resume formats are chronological, functional, and combination. Choose one based on your work experience and the job you're applying for. Would you like a template?"
+      ]
+    },
+    {
+      "tag": "resume_sample",
+      "patterns": [
+        "Do you have a resume sample?",
+        "Can you show me a resume example?",
+        "Give me a sample resume"
+      ],
+      "responses": [
+        "Here’s a simple sample format you can follow: Name, Contact Info, Objective (Optional), Education, Experience, Skills, Certifications, and References."
+      ]
+    },
+    {
+      "tag": "scholarships_info",
+      "patterns": [
+        "What scholarships are available?",
+        "Tell me about scholarships",
+        "Do you offer scholarships?",
+        "What scholarships can I apply for?"
+      ],
+      "responses": [
+        "We provide scholarship opportunities for high school students worldwide. You can check our website for current scholarship offerings. Would you like to know more about the eligibility criteria?"
+      ]
+    },
+    {
+      "tag": "scholarships_eligibility",
+      "patterns": [
+        "Who is eligible for scholarships?",
+        "What are the eligibility requirements for scholarships?",
+        "Can I apply for a scholarship?"
+      ],
+      "responses": [
+        "Eligibility varies depending on the scholarship, but generally, students must be enrolled in high school, demonstrate academic achievement, and meet other specific requirements. Would you like to explore specific scholarships?"
+      ]
+    },
+    {
+      "tag": "scholarships_deadlines",
+      "patterns": [
+        "When is the deadline to apply for scholarships?",
+        "What are the deadlines for scholarships?",
+        "Are there any upcoming scholarship deadlines?"
+      ],
+      "responses": [
+        "Scholarship deadlines vary by program. Please check our website or the specific scholarship page for the latest dates."
+      ]
+    },
+    {
+      "tag": "scholarships_application_process",
+      "patterns": [
+        "How do I apply for a scholarship?",
+        "What is the process for applying for a scholarship?",
+        "Can you help me apply for a scholarship?"
+      ],
+      "responses": [
+        "To apply for a scholarship, you'll need to fill out an application form, submit your academic records, and provide any required supporting documents. Would you like to know more about the application process?"
+      ]
+    },
+    {
+      "tag": "scholarships_guidance",
+      "patterns": [
+        "Do you offer help with scholarship applications?",
+        "Can you guide me through the scholarship application?",
+        "Can you help me write a scholarship essay?"
+      ],
+      "responses": [
+        "Yes! I can provide guidance on writing scholarship essays, filling out application forms, and gathering necessary documents. Would you like advice on any specific part of the process?"
+      ]
+    },
 
-      {
-        "tag": "about_omar",
-        "patterns": [
-          "Who is Omar Keita?",
-          "Tell me about Omar Keita",
-          "Who founded MarAcademy?",
-          "Can you tell me about the founder?"
-        ],
-        "responses": [
-          "Omar Keita is the founder of MarAcademy, an online platform dedicated to providing free coding courses, career development, and scholarship opportunities for high school students."
-        ]
-      },
-      {
-        "tag": "omar_background",
-        "patterns": [
-          "What is Omar Keita's background?",
-          "What does Omar Keita do?",
-          "Tell me about Omar Keita's career"
-        ],
-        "responses": [
-          "Omar Keita is a machine learning engineer with a passion for education and technology. He is committed to using AI and machine learning to solve real-world problems and to help students access valuable learning resources."
-        ]
-      },
-      {
-        "tag": "omar_motivation",
-        "patterns": [
-          "Why did Omar Keita start MarAcademy?",
-          "What motivated Omar Keita to create MarAcademy?",
-          "What is Omar Keita's mission with MarAcademy?"
-        ],
-        "responses": [
-          "Omar Keita started MarAcademy with the mission of empowering high school students worldwide by offering free educational resources, scholarships, and career development opportunities. His goal is to make quality education accessible to everyone."
-        ]
-      },
-      {
-        "tag": "omar_goals",
-        "patterns": [
-          "What are Omar Keita's goals?",
-          "What is Omar Keita trying to achieve?",
-          "What are the main goals of MarAcademy?"
-        ],
-        "responses": [
-          "Omar Keita aims to revolutionize education by creating an inclusive platform where high school students can learn valuable skills, such as coding, machine learning, and career development, without financial barriers."
-        ]
-      },
-      {
-        "tag": "omar_personality",
-        "patterns": [
-          "What is Omar Keita like?",
-          "Tell me about Omar Keita's personality",
-          "How would you describe Omar Keita?"
-        ],
-        "responses": [
-          "Omar Keita is passionate, driven, and focused on making a positive impact. He is dedicated to helping others succeed and believes in the power of education to transform lives."
-        ]
-      },
-      {
-        "tag": "location",
-        "patterns": [
-          "Where is MarAcademy located?",
-          "Where are you based?",
-          "What is the location of MarAcademy?"
-        ],
-        "responses": [
-          "MarAcademy is an online platform, so we are accessible to students worldwide! We aim to provide free resources and support to high school students, regardless of their location."
-        ]
-      },
-      {
-        "tag": "mission",
-        "patterns": [
-          "What is MarAcademy's mission?",
-          "What does MarAcademy aim to do?",
-          "Tell me about your mission"
-        ],
-        "responses": [
-          "The mission of MarAcademy is to empower high school students by providing free coding courses, career development tools, and scholarships to help them succeed in their educational and professional journeys."
-        ]
-      },
-      {
-        "tag": "vision",
-        "patterns": [
-          "What is MarAcademy's vision?",
-          "What is your vision for the future?",
-          "What is the vision behind MarAcademy?"
-        ],
-        "responses": [
-          "MarAcademy's vision is to become a global leader in accessible education, helping students from all backgrounds unlock their potential by offering high-quality, free resources that empower them to thrive in the digital age."
-        ]
-      },
-      {
-        "intents": [
-          {
-            "tag": "location",
-            "patterns": [
-              "Where is MarAcademy located?",
-              "Where are you based?",
-              "What is the location of MarAcademy?"
-            ],
-            "responses": [
-              "MarAcademy is an online platform, so we are accessible to students worldwide! We aim to provide free resources and support to high school students, regardless of their location."
-            ]
-          },
-          {
-            "tag": "mission",
-            "patterns": [
-              "What is MarAcademy's mission?",
-              "What does MarAcademy aim to do?",
-              "Tell me about your mission"
-            ],
-            "responses": [
-              "The mission of MarAcademy is to empower high school students by providing free coding courses, career development tools, and scholarships to help them succeed in their educational and professional journeys."
-            ]
-          },
-          {
-            "tag": "vision",
-            "patterns": [
-              "What is MarAcademy's vision?",
-              "What is your vision for the future?",
-              "What is the vision behind MarAcademy?"
-            ],
-            "responses": [
-              "MarAcademy's vision is to become a global leader in accessible education, helping students from all backgrounds unlock their potential by offering high-quality, free resources that empower them to thrive in the digital age."
-            ]
-          }
-        ]
-      },
-      {
-        "tag": "career_support",
-        "patterns": [
-          "Does MarAcademy provide career support?",
-          "Can you help me with my career?",
-          "What career services do you offer?",
-          "Do you offer job placement assistance?"
-        ],
-        "responses": [
-          "MarAcademy provides career development support, including resume building, internship opportunities, and job placement assistance for students. We aim to help you succeed in your career."
-        ]
-      }
+    {
+      "tag": "about_omar",
+      "patterns": [
+        "Who is Omar Keita?",
+        "Tell me about Omar Keita",
+        "Who founded MarAcademy?",
+        "Can you tell me about the founder?"
+      ],
+      "responses": [
+        "Omar Keita is the founder of MarAcademy, an online platform dedicated to providing free coding courses, career development, and scholarship opportunities for high school students."
+      ]
+    },
+    {
+      "tag": "omar_background",
+      "patterns": [
+        "What is Omar Keita's background?",
+        "What does Omar Keita do?",
+        "Tell me about Omar Keita's career"
+      ],
+      "responses": [
+        "Omar Keita is a machine learning engineer with a passion for education and technology. He is committed to using AI and machine learning to solve real-world problems and to help students access valuable learning resources."
+      ]
+    },
+    {
+      "tag": "omar_motivation",
+      "patterns": [
+        "Why did Omar Keita start MarAcademy?",
+        "What motivated Omar Keita to create MarAcademy?",
+        "What is Omar Keita's mission with MarAcademy?"
+      ],
+      "responses": [
+        "Omar Keita started MarAcademy with the mission of empowering high school students worldwide by offering free educational resources, scholarships, and career development opportunities. His goal is to make quality education accessible to everyone."
+      ]
+    },
+    {
+      "tag": "omar_goals",
+      "patterns": [
+        "What are Omar Keita's goals?",
+        "What is Omar Keita trying to achieve?",
+        "What are the main goals of MarAcademy?"
+      ],
+      "responses": [
+        "Omar Keita aims to revolutionize education by creating an inclusive platform where high school students can learn valuable skills, such as coding, machine learning, and career development, without financial barriers."
+      ]
+    },
+    {
+      "tag": "omar_personality",
+      "patterns": [
+        "What is Omar Keita like?",
+        "Tell me about Omar Keita's personality",
+        "How would you describe Omar Keita?"
+      ],
+      "responses": [
+        "Omar Keita is passionate, driven, and focused on making a positive impact. He is dedicated to helping others succeed and believes in the power of education to transform lives."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where is MarAcademy located?",
+        "Where are you based?",
+        "What is the location of MarAcademy?"
+      ],
+      "responses": [
+        "MarAcademy is an online platform, so we are accessible to students worldwide! We aim to provide free resources and support to high school students, regardless of their location."
+      ]
+    },
+    {
+      "tag": "mission",
+      "patterns": [
+        "What is MarAcademy's mission?",
+        "What does MarAcademy aim to do?",
+        "Tell me about your mission"
+      ],
+      "responses": [
+        "The mission of MarAcademy is to empower high school students by providing free coding courses, career development tools, and scholarships to help them succeed in their educational and professional journeys."
+      ]
+    },
+    
+        {
+          "tag": "location",
+          "patterns": [
+            "Where is MarAcademy located?",
+            "Where are you based?",
+            "What is the location of MarAcademy?"
+          ],
+          "responses": [
+            "MarAcademy is an online platform, so we are accessible to students worldwide! We aim to provide free resources and support to high school students, regardless of their location."
+          ]
+        },
+        {
+          "tag": "mission",
+          "patterns": [
+            "What is MarAcademy's mission?",
+            "What does MarAcademy aim to do?",
+            "Tell me about your mission"
+          ],
+          "responses": [
+            "The mission of MarAcademy is to empower high school students by providing free coding courses, career development tools, and scholarships to help them succeed in their educational and professional journeys."
+          ]
+        },
+        {
+          "tag": "vision",
+          "patterns": [
+            "What is MarAcademy's vision?",
+            "What is your vision for the future?",
+            "What is the vision behind MarAcademy?"
+          ],
+          "responses": [
+            "MarAcademy's vision is to become a global leader in accessible education, helping students from all backgrounds unlock their potential by offering high-quality, free resources that empower them to thrive in the digital age."
+          ]
+        },
       
-      
-      
-      
-      
-    ]
-  }
-  
+    {
+      "tag": "career_support",
+      "patterns": [
+        "Does MarAcademy provide career support?",
+        "Can you help me with my career?",
+        "What career services do you offer?",
+        "Do you offer job placement assistance?"
+      ],
+      "responses": [
+        "MarAcademy provides career development support, including resume building, internship opportunities, and job placement assistance for students. We aim to help you succeed in your career."
+      ]
+    },
+
+    {
+      "tag": "introduce_yourself",
+      "patterns": [
+        "Who are you?",
+        "What is your job?",
+        "What do you do?"
+      ],
+      "responses": [
+        "I’m Mina, your virtual assistant at MarAcademy. I’m here to help with courses, account issues, or any questions you have.",
+        "I’m Mina, your friendly assistant. My job is to guide you through MarAcademy and help with whatever you need!"
+      ]
+    },
+    {
+      "tag": "express_confusion",
+      "patterns": [
+        "Hmm",
+        "Uh",
+        "I don’t know"
+      ],
+      "responses": [
+        "No problem! Let me know if you have any questions or need guidance.",
+        "Take your time—I'm here whenever you're ready to ask!"
+      ]
+    },
+
+    {
+      "tag": "laugh_informal",
+      "patterns": [
+        "lol",
+        "haha",
+        "rofl"
+      ],
+      "responses": [
+        "Glad I could make you smile! What’s on your mind?",
+        "Haha! Always happy to keep it fun. Need help with something?"
+      ]
+    }
+    
+
+    
+  ]
+}
